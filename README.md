@@ -7,7 +7,7 @@ Filter checkstyle.xml according to a diff
 ## Usage
 
 ```bash
-phpcs --report=checkstyle | sponge phpcs-checkstyle.xml
+phpcs -q --report=checkstyle | sponge phpcs-checkstyle.xml
 git diff main > main.diff
 vendor/bin/prf filter-checkstyle main.diff phpcs-checkstyle.xml filtered-checkstyle.xml --base-path=$(pwd)
 ```
