@@ -1,12 +1,18 @@
-<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/6.2/phpunit.xsd"
-         beStrictAboutChangesToGlobalState="true"
-         beStrictAboutOutputDuringTests="true"
-         beStrictAboutTestsThatDoNotTestAnything="true"
->
-    <filter>
-        <whitelist>
-            <directory suffix="php">src</directory>
-        </whitelist>
-    </filter>
+<?xml version="1.0"?>
+<phpunit
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/9.3/phpunit.xsd"
+        beStrictAboutChangesToGlobalState="true"
+        beStrictAboutOutputDuringTests="true"
+        beStrictAboutTestsThatDoNotTestAnything="true">
+  <coverage>
+    <include>
+      <directory suffix="php">src</directory>
+    </include>
+  </coverage>
+  <testsuites>
+    <testsuite name="all">
+      <directory>./tests/</directory>
+    </testsuite>
+  </testsuites>
 </phpunit>

@@ -102,7 +102,7 @@ class FileTest extends TestCase
 
         /** @var File|MockObject $mock */
         $mock = $this->getMockBuilder(File::class)
-            ->setMethods(['assertFileIsReadable'])
+            ->onlyMethods(['assertFileIsReadable'])
             ->setConstructorArgs([$file->url()])
             ->getMock();
 
