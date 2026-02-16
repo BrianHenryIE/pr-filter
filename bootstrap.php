@@ -12,4 +12,4 @@ foreach ($possibleAutoloaders as $file) {
     }
 }
 
-return \DI\ContainerBuilder::buildDevContainer();
+return (new \DI\ContainerBuilder())->build();

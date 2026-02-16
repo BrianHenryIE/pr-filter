@@ -190,7 +190,7 @@ class DiffTest extends TestCase
     private static function getFactory()
     {
         try {
-            return ContainerBuilder::buildDevContainer()->get(
+            return (new \DI\ContainerBuilder())->build()->get(
                 Factory::class
             );
         } catch (Exception $e) {
