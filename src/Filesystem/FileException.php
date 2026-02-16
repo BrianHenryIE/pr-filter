@@ -43,7 +43,7 @@ class FileException extends Exception
         );
     }
 
-    public static function readingFailed($filename, array $error = null): self
+    public static function readingFailed($filename, ?array $error = null): self
     {
         $error = (array) $error + ['message' => 'Unknown error'];
         return new self(
