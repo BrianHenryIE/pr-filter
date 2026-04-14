@@ -26,7 +26,7 @@ class LoaderTest extends TestCase
         /** @var MockObject|File $fileMock */
         $fileMock = $this->getMockBuilder(File::class)
             ->disableOriginalConstructor()
-            ->setMethods(['assertFileIsReadable'])
+            ->onlyMethods(['assertFileIsReadable'])
             ->getMock();
 
         $fileMock->expects($this->once())
@@ -34,7 +34,7 @@ class LoaderTest extends TestCase
 
         /** @var MockObject|FileFactory $fileFactoryMock */
         $fileFactoryMock = $this->getMockBuilder(FileFactory::class)
-            ->setMethods(['file'])
+            ->onlyMethods(['file'])
             ->getMock();
 
         $fileFactoryMock->expects($this->once())
@@ -59,7 +59,7 @@ class LoaderTest extends TestCase
         /** @var MockObject|File $fileMock */
         $fileMock = $this->getMockBuilder(File::class)
             ->disableOriginalConstructor()
-            ->setMethods(['assertFileIsReadable'])
+            ->onlyMethods(['assertFileIsReadable'])
             ->getMock();
 
         $fileMock->expects($this->once())
@@ -68,7 +68,7 @@ class LoaderTest extends TestCase
 
         /** @var MockObject|FileFactory $fileFactoryMock */
         $fileFactoryMock = $this->getMockBuilder(FileFactory::class)
-            ->setMethods(['file'])
+            ->onlyMethods(['file'])
             ->getMock();
 
         $fileFactoryMock->expects($this->once())

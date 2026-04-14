@@ -12,7 +12,7 @@ class Node
     private $element;
     private $trailingWhitespace;
 
-    public function __construct(DOMElement $element, DOMText $whitespace = null)
+    public function __construct(DOMElement $element, ?DOMText $whitespace = null)
     {
         $this->element = $element;
         $this->trailingWhitespace = $whitespace;

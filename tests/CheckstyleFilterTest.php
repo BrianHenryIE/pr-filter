@@ -76,7 +76,7 @@ class CheckstyleFilterTest extends TestCase
         /** @var Loader|MockObject $loader */
         $loader = $this->getMockBuilder(Loader::class)
             ->disableOriginalConstructor()
-            ->setMethods(['loadFromFile'])
+            ->onlyMethods(['loadFromFile'])
             ->getMock();
 
         $loader->expects($this->once())

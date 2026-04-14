@@ -53,7 +53,7 @@ class FileExceptionTest extends TestCase
         );
     }
 
-    public function emptyErrorsDataProvider()
+    public static function emptyErrorsDataProvider()
     {
         return [
             'null' => [null],
